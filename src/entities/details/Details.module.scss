@@ -1,0 +1,86 @@
+.details {
+	@apply flex flex-col justify-between  dark:bg-stone-700;
+}
+
+.information {
+	@apply flex justify-between h-full;
+}
+
+.currentBalance {
+	@apply mr-5;
+
+	& p {
+		@apply first:text-4xl first:w-52 last:text-3xl last:opacity-60;
+	}
+}
+
+.description {
+	@apply w-full flex justify-around text-2xl;
+}
+
+.title {
+	& .item {
+		@apply mb-3 opacity-60;
+	}
+}
+
+.emptyMessage {
+	@apply flex justify-center h-full items-center text-2xl;
+}
+
+.info {
+	& .item {
+		@apply mb-3 font-bold;
+	}
+}
+
+.actions {
+	@apply flex justify-between;
+
+	& button {
+		@apply w-52 first:bg-yellow-400 text-xl first:border-yellow-400;
+
+		& svg {
+			@apply size-8;
+		}
+	}
+}
+
+.loader {
+	@apply animate-pulse flex flex-col justify-between h-full;
+
+	.information {
+		@apply flex justify-between;
+	}
+
+	.currentBalance {
+		@apply bg-gray-300 w-30 h-20 rounded-lg;
+	}
+
+	.description {
+		@apply w-full flex justify-around;
+	}
+
+	.title {
+		@apply w-40;
+
+		& .item {
+			@apply w-full h-8 bg-gray-300 rounded-lg mb-3;
+		}
+	}
+
+	.info {
+		@apply w-40;
+		& .item {
+			@apply w-full h-8 bg-gray-300 rounded-lg mb-3;
+		}
+	}
+
+	.actions {
+		@apply flex justify-between;
+
+		& div {
+			@apply w-52 h-10 bg-gray-300 rounded-lg;
+		}
+	}
+}

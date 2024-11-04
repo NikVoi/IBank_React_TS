@@ -1,0 +1,27 @@
+.transactions {
+	@apply row-span-3 flex flex-col h-full dark:bg-stone-700;
+}
+
+.title {
+	@apply text-2xl mb-8;
+}
+
+.container {
+	@apply flex flex-col h-full overflow-hidden overflow-y-scroll;
+}
+
+.container::-webkit-scrollbar {
+	display: none;
+}
+
+.container {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.loader {
+}
+
+.emptyMessage {
+	@apply flex justify-center items-center h-full text-2xl;
+}

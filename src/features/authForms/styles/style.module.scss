@@ -1,0 +1,23 @@
+.form {
+	@apply w-full max-w-[300px] mb-3;
+
+	& * {
+		@apply mb-2 text-xl;
+	}
+
+	& input {
+		@apply text-base;
+	}
+
+	& button {
+		@apply w-full;
+	}
+}
+
+.settingForm {
+	@apply flex flex-col justify-center items-center  border border-solid border-white p-5 rounded-lg;
+
+	& button {
+		@apply w-10/12;
+	}
+}

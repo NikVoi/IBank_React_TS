@@ -1,0 +1,64 @@
+.auth {
+	@apply relative flex items-center justify-center flex-col w-full h-full;
+
+	& > div {
+		@apply flex items-center justify-center flex-col;
+	}
+}
+
+.logo {
+	@apply font-bold text-2xl flex items-center justify-center mb-6;
+
+	& svg {
+		@apply mr-3 text-3xl;
+	}
+}
+
+.title,
+.subTitle,
+.line {
+	@apply max-w-[380px] w-full text-center;
+}
+
+.title {
+	@apply text-4xl font-bold mb-1;
+}
+
+.subTitle {
+	@apply text-2xl mb-4;
+}
+
+.line {
+	@apply flex justify-center items-center mb-3;
+	& span {
+		@apply min-w-[160px];
+	}
+
+	& hr {
+		@apply border-t border-solid w-full mx-2  opacity-40;
+	}
+}
+
+.switch {
+	@apply absolute top-4 right-4;
+}
+
+.other {
+	@apply flex  justify-center items-center mb-3;
+
+	& button {
+		@apply mr-3;
+	}
+}
+
+.policy {
+	@apply max-w-[350px] text-xs text-center text-neutral-500;
+}
+
+.link {
+	@apply underline;
+
+	&:hover {
+		@apply duration-200 text-black dark:text-white underline;
+	}
+}

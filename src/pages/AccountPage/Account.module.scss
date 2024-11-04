@@ -1,0 +1,7 @@
+.account {
+	@apply w-full h-full p-4 grid grid-cols-2 grid-rows-3 gap-4 bg-card;
+
+	& > * {
+		@apply border border-solid border-gray-600 rounded-2xl p-3 border-opacity-30 bg-white;
+	}
+}

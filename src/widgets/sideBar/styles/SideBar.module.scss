@@ -1,0 +1,62 @@
+.sideBar {
+	@apply flex justify-between flex-col bg-stone-700 w-full max-w-[250px] text-white;
+}
+
+.header {
+	@apply p-5;
+
+	.logo {
+		@apply text-3xl flex  cursor-pointer mb-8;
+
+		& span {
+			@apply ml-4 font-bold;
+		}
+	}
+}
+
+nav {
+	@apply flex flex-col px-5;
+
+	.item {
+		@apply relative flex justify-between items-center text-sm font-medium hover:bg-stone-500 p-3 cursor-pointer mb-4 rounded-xl
+		before:content-[''] before:absolute before:-left-20 before:duration-200 
+		before:w-8 before:h-12 before:rounded-xl before:bg-stone-500
+		hover:before:-left-10;
+
+		& span {
+			@apply flex items-center;
+		}
+
+		& svg {
+			@apply mr-3 size-5;
+		}
+	}
+
+	.item:hover {
+		& .right {
+			@apply text-primary;
+		}
+	}
+
+	.active {
+		@apply bg-stone-500 before:-left-10;
+
+		& .right {
+			@apply text-primary;
+		}
+	}
+}
+
+.footer {
+	@apply p-5;
+
+	.user {
+		@apply text-xl flex items-center;
+	}
+
+	.user_wrapper {
+		& p {
+			@apply last:cursor-pointer ml-5;
+		}
+	}
+}
