@@ -1,0 +1,15 @@
+.register {
+	@apply p-5;
+
+	h2 {
+		@apply font-bold mb-2;
+	}
+
+	h3 {
+		@apply mb-4;
+	}
+
+	hr {
+		@apply max-h-[1px] border-b border-solid border-white border-opacity-40 w-full;
+	}
+}

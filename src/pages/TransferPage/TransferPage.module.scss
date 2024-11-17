@@ -1,0 +1,11 @@
+.transfer {
+	@apply p-4;
+
+	h2 {
+		@apply text-2xl font-bold mb-3;
+	}
+
+	hr {
+		@apply w-full h-1 border-solid border-white opacity-70 mb-2;
+	}
+}

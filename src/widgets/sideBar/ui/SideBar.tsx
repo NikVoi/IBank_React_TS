@@ -13,11 +13,7 @@ interface Props {
 	setActiveComponent: (component: string) => void
 }
 
-const SideBar: FC<Props> = ({
-	className,
-	activeComponent,
-	setActiveComponent,
-}) => {
+const SideBar: FC<Props> = ({ activeComponent, setActiveComponent }) => {
 	const navigate = useNavigate()
 
 	const handleItemClick = (path: string) => {

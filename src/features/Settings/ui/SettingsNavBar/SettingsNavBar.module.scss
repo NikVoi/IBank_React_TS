@@ -1,0 +1,7 @@
+.SettingsNavBar {
+	@apply flex flex-col mr-6;
+
+	& > button {
+		@apply mb-3 last:mb-0;
+	}
+}

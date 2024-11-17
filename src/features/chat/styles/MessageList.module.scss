@@ -1,0 +1,79 @@
+.MessageList {
+	@apply w-full flex-1 w-full;
+}
+
+header {
+	@apply flex items-center mb-4;
+}
+
+.avatar {
+	@apply size-10 mr-3;
+}
+
+.wrapper {
+	@apply flex-col flex-col justify-evenly h-full;
+
+	.name {
+		@apply mb-1;
+	}
+
+	.active {
+		@apply opacity-70;
+	}
+}
+
+.TheirMessage {
+	@apply flex mb-4;
+
+	.messages {
+		@apply py-4;
+	}
+
+	.avatarMessage {
+		@apply w-10 mr-2;
+	}
+
+	.name {
+		@apply mr-2;
+	}
+
+	.date {
+		@apply opacity-70;
+	}
+
+	.text {
+		@apply p-3 rounded-xl mt-4 bg-secondary;
+	}
+}
+
+.content {
+	@apply w-2/3;
+}
+
+.MyMessage {
+	@apply flex flex-row-reverse;
+
+	.messages {
+		@apply py-4;
+	}
+
+	.avatarMessage {
+		@apply w-10	 ml-2;
+	}
+
+	.reverse {
+		@apply flex flex-row-reverse;
+	}
+
+	.name {
+		@apply ml-2;
+	}
+
+	.date {
+		@apply opacity-70;
+	}
+
+	.text {
+		@apply p-3 rounded-xl mt-4 bg-primary;
+	}
+}

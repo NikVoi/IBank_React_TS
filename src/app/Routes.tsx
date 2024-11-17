@@ -1,48 +1,69 @@
-import Account from '@/pages/AccountPage/Account'
-import AuthPage from '@/pages/AuthPage/AuthPage'
-import Chat from '@/pages/ChatPage/Chat'
-import Currency from '@/pages/CurrencyPage/Currency'
-import DashboardPage from '@/pages/DashboardPage/DashboardPage'
-import Settings from '@/pages/SettingsPage/Settings'
-import Spending from '@/pages/SpendingPage/Spending'
-import Transfer from '@/pages/TransferPage/Transfer'
-import { ROUTES } from '@/shared/constant/Routes'
-import { createBrowserRouter } from 'react-router-dom'
+import {
+	SettingsAccount,
+	SettingsAppearance,
+	SettingsNotifications,
+	SettingsProfile,
+} from '@/features/Settings/ui'
+import {
+	AccountPage,
+	AuthPage,
+	ChatPage,
+	CurrencyPage,
+	DashboardPage,
+	SettingsPage,
+	SpendingPage,
+	TransferPage,
+} from '@/pages'
+import RegisterPage from '@/pages/RegisterPage/RegisterPage'
 
-const { VITE_NAV_AUTH, VITE_NAV_DASHBOARD } = import.meta.env
+import { ROUTES, SETTINGS_ROUTES } from '@/shared/constant/Routes'
+import { createBrowserRouter } from 'react-router-dom'
 
 export const router = createBrowserRouter([
 	{
-		path: VITE_NAV_AUTH,
+		path: ROUTES.AUTH,
 		element: <AuthPage />,
 	},
 	{
-		path: VITE_NAV_DASHBOARD,
+		path: ROUTES.REGISTER,
+		element: <RegisterPage />,
+	},
+	{
+		path: ROUTES.DASHBOARD,
 		element: <DashboardPage />,
 		children: [
 			{
 				path: ROUTES.ACCOUNT,
-				element: <Account />,
+				element: <AccountPage />,
 			},
 			{
 				path: ROUTES.TRANSFER,
-				element: <Transfer />,
+				element: <TransferPage />,
 			},
 			{
 				path: ROUTES.SPENDING,
-				element: <Spending />,
+				element: <SpendingPage />,
 			},
 			{
 				path: ROUTES.CURRENCY,
-				element: <Currency />,
+				element: <CurrencyPage />,
 			},
 			{
 				path: ROUTES.SETTINGS,
-				element: <Settings />,
+				element: <SettingsPage />,
+				children: [
+					{ path: SETTINGS_ROUTES.ACCOUNT, element: <SettingsAccount /> },
+					{ path: SETTINGS_ROUTES.PROFILE, element: <SettingsProfile /> },
+					{ path: SETTINGS_ROUTES.APPEARANCE, element: <SettingsAppearance /> },
+					{
+						path: SETTINGS_ROUTES.NOTIFICATIONS,
+						element: <SettingsNotifications />,
+					},
+				],
 			},
 			{
 				path: ROUTES.CHAT,
-				element: <Chat />,
+				element: <ChatPage />,
 			},
 		],
 	},

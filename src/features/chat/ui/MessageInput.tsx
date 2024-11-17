@@ -1,7 +1,8 @@
 import { Button } from '@/shared/ui/button'
 import { Input } from '@/shared/ui/input'
 import { FC } from 'react'
-import styles from './MessageInput.module.scss'
+import { IoSend } from 'react-icons/io5'
+import styles from '../styles/MessageInput.module.scss'
 
 interface Props {
 	className?: string
@@ -10,10 +11,10 @@ interface Props {
 const MessageInput: FC<Props> = ({ className }) => {
 	return (
 		<section className={styles.MessageInput}>
-			<form className={styles.Input}>
-				<Input type='text' placeholder='Сообщение...' />
-				<Button type='submit'>send</Button>
-			</form>
+			<Input type='text' placeholder='Сообщение...' />
+			<Button type='submit'>
+				<IoSend />
+			</Button>
 		</section>
 	)
 }

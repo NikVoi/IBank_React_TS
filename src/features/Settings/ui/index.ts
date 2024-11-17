@@ -1,0 +1,6 @@
+export { SettingsAccount } from './SettingsAccount'
+export { SettingsAppearance } from './SettingsAppearance'
+export { SettingsHeader } from './SettingsHeader'
+export { SettingsNavBar } from './SettingsNavBar'
+export { SettingsNotifications } from './SettingsNotifications'
+export { SettingsProfile } from './SettingsProfile'
